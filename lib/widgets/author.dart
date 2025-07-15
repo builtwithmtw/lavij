@@ -1,0 +1,40 @@
+import 'package:flutter/material.dart';
+import 'package:mybook/widgets/KurdishText.dart';
+
+class Author extends StatelessWidget {
+  const Author({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Column(
+          children: [
+            KurdishText(
+              text: 'مؤساعه سهد نبرايهيه',
+              fontSize: 18,
+            ),
+            KurdishText(
+              text: 'ماموستاى ياريده دهر',
+              fontSize: 18,
+            ),
+          ],
+        ),
+        SizedBox(width: 30), // space between text and image
+        // square image
+        Container(
+          width: 80,
+          height: 80,
+          decoration: BoxDecoration(
+            shape: BoxShape.rectangle,
+            image: DecorationImage(
+              image: AssetImage('assets/author_image.jpeg'),
+              fit: BoxFit.cover,
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+}
