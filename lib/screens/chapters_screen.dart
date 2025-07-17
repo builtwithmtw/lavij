@@ -21,7 +21,6 @@ class _ChaptersScreenState extends State<ChaptersScreen> {
     'باب نۆهم', // 9
     'باب ده‌هم', // 10
     'باب یازده‌م', // 11
-    'باب دوازده‌م', // 12
   ];
 
   late List<String> chapters;
