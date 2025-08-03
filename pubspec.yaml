@@ -1,5 +1,5 @@
-name: mybook
-description: "A new Flutter project."
+name: lavij
+description: "A Kurdisk book app"
 publish_to: "none"
 version: 1.0.0+1
 
@@ -20,6 +20,7 @@ dependencies:
   intl: ^0.19.0
   google_fonts: ^6.1.0
   flutter_launcher_icons: ^0.14.3
+  flutter_staggered_grid_view: ^0.7.0
 
 flutter_launcher_icons:
   android: true
@@ -35,8 +36,72 @@ dev_dependencies:
 flutter:
   uses-material-design: true
 
+  fonts:
+    - family: AliKAlwand
+      fonts:
+        - asset: assets/fonts/Ali-K-Alwand.ttf
+
+    - family: FindiKIsam
+      fonts:
+        - asset: assets/fonts/FINDI_K_ISAM.ttf
+
   # To add assets to your application, add an assets section, like this:
   assets:
+    - assets/fonts/
+    - assets/images/12_1/
+    - assets/images/12_2/1/
+    - assets/images/12_2/2/
+    - assets/images/12_2/3/
+    - assets/images/12_2/4/
+    - assets/images/12_2/5/
+    - assets/images/12_2/6/
+    - assets/images/12_2/7/
+    - assets/images/12_2/8/
+    - assets/images/12_2/10/
+    - assets/images/12_2/11/
+    - assets/images/12_2/12/
+    - assets/images/12_2/13/
+    - assets/images/12_2/16/
+    - assets/images/12_3/1/
+    - assets/images/12_3/2/
+    - assets/images/12_3/3/
+    - assets/images/12_3/4/
+    - assets/images/12_4/1/
+    - assets/images/12_4/2/
+    - assets/images/12_4/3/
+    - assets/images/12_4/4/
+    - assets/images/12_4/5/
+    - assets/images/12_4/6/
+    - assets/images/12_4/7/
+    - assets/images/12_4/8/
+    - assets/images/12_4/9/
+    - assets/images/12_4/10/
+    - assets/images/12_5/1/
+    - assets/images/12_5/2/
+    - assets/images/12_5/3/
+    - assets/images/12_5/4/
+    - assets/images/12_5/5/
+    - assets/images/12_6/1/
+    - assets/images/12_6/2/
+    - assets/images/12_6/3/
+    - assets/images/12_7/1/
+    - assets/images/12_7/2/
+    - assets/images/12_8/1/
+    - assets/images/12_8/2/
+    - assets/images/12_8/3/
+    - assets/images/12_8/4/
+    - assets/images/12_8/5/
+    - assets/images/12_8/6/
+    - assets/images/12_8/7/
+    - assets/images/12_8/8/
+    - assets/images/12_8/10/
+    - assets/images/12_8/11/
+    - assets/images/12_9/1/
+    - assets/images/12_9/2/
+    - assets/images/12_10/1/
+    - assets/images/12_11/1/
+    - assets/images/12_11/2/
+    - assets/images/12_12/1/
     - assets/book_cover.jpeg
     - assets/author_image.jpeg
     - assets/chapter1.json
@@ -50,7 +115,7 @@ flutter:
     - assets/chapter9.json
     - assets/chapter10.json
     - assets/chapter11.json
-    - assets/chapter12.json
+    - assets/pics.json
 
   # example:
   # fonts:

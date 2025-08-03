@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mybook/constants/app_routes.dart';
-import 'package:mybook/widgets/KurdishText.dart';
-import 'package:mybook/widgets/author.dart';
-import 'package:mybook/widgets/book_cover.dart';
+import 'package:lavij/constants/app_routes.dart';
+import 'package:lavij/widgets/KurdishText.dart';
+import 'package:lavij/widgets/author.dart';
+import 'package:lavij/widgets/book_cover.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -31,7 +31,7 @@ class HomeScreen extends StatelessWidget {
                     color: Colors.black),
                 SizedBox(height: 10),
                 KurdishText(
-                  text: 'مؤسائه سعهد ئيبراهيم',
+                  text: 'لاظذ',
                 ),
                 SizedBox(height: 20),
                 ElevatedButton(

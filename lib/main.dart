@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
-import 'package:mybook/constants/app_colors.dart';
+import 'package:lavij/constants/app_colors.dart';
 import 'package:get/get.dart';
-import 'package:mybook/constants/app_routes.dart';
+import 'package:lavij/constants/app_routes.dart';
 
 void main() {
   runApp(const MyApp());

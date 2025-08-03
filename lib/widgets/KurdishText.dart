@@ -6,6 +6,7 @@ class KurdishText extends StatelessWidget {
   final double fontSize;
   final FontWeight fontWeight;
   final Color color;
+  final String? fontFamily; // Optional custom font
 
   const KurdishText({
     Key? key,
@@ -13,6 +14,7 @@ class KurdishText extends StatelessWidget {
     this.fontSize = 18,
     this.fontWeight = FontWeight.normal,
     this.color = Colors.black,
+    this.fontFamily,
   }) : super(key: key);
 
   @override
@@ -20,10 +22,13 @@ class KurdishText extends StatelessWidget {
     return Text(
       text,
       textDirection: TextDirection.rtl, // For Sorani (Right to Left)
-      style: GoogleFonts.notoNaskhArabic(
+      softWrap: true,
+      maxLines: null,
+      style: TextStyle(
         fontSize: fontSize,
         fontWeight: fontWeight,
         color: color,
+        fontFamily: 'FindiKIsam', // Default to Alwand
       ),
     );
   }

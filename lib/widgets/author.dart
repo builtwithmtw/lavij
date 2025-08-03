@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mybook/widgets/KurdishText.dart';
+import 'package:lavij/widgets/KurdishText.dart';
 
 class Author extends StatelessWidget {
   const Author({super.key});

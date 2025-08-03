@@ -1,6 +1,8 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
-import 'package:mybook/constants/app_routes.dart';
-import 'package:mybook/widgets/KurdishText.dart';
+import 'package:lavij/constants/app_routes.dart';
+import 'package:lavij/widgets/KurdishText.dart';
 import 'package:get/get.dart';
 
 class ChaptersScreen extends StatefulWidget {
@@ -21,6 +23,7 @@ class _ChaptersScreenState extends State<ChaptersScreen> {
     'باب نۆهم', // 9
     'باب ده‌هم', // 10
     'باب یازده‌م', // 11
+    'باب دوازده‌م' // 12
   ];
 
   late List<String> chapters;
@@ -68,8 +71,17 @@ class _ChaptersScreenState extends State<ChaptersScreen> {
 
               /// ── Search Bar
               TextField(
+                style: TextStyle(
+                  fontFamily: 'AliKAlwand', // 👈 for typed text
+                  fontSize: 18,
+                ),
                 decoration: InputDecoration(
                   hintText: '...كهران بو بابيك',
+                  hintStyle: TextStyle(
+                    fontFamily: 'AliKAlwand', // 👈 for placeholder/hint
+                    fontSize: 16,
+                    color: Colors.grey[600],
+                  ),
                   prefixIcon: Icon(Icons.search),
                   filled: true,
                   fillColor: Colors.grey[100],
@@ -83,19 +95,42 @@ class _ChaptersScreenState extends State<ChaptersScreen> {
                   setState(() => searchQuery = val);
                 },
               ),
-              SizedBox(height: 16),
+              SizedBox(height: 24),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  KurdishText(
+                    text: 'ناظةرؤكا ثةرتؤكيَ',
+                    fontSize: 24,
+                    color: Colors.black,
+                  ),
+                ],
+              ),
+              SizedBox(height: 25),
 
               /// ── Grid (Scroll inside parent scroll view)
               GridView.count(
                 crossAxisCount: 2,
                 shrinkWrap: true,
-                physics:
-                    NeverScrollableScrollPhysics(), // Disable internal scroll
+                physics: NeverScrollableScrollPhysics(),
                 crossAxisSpacing: 24,
                 mainAxisSpacing: 18,
                 childAspectRatio: 1.2,
                 children: List.generate(filteredChapters.length, (index) {
-                  return _buildChapterTile(filteredChapters[index], index);
+                  return _buildChapterTile(
+                    filteredChapters[index],
+                    onTap: () {
+                      final int chapterNo = index + 1;
+                      if (chapterNo != 12) {
+                        Get.toNamed(
+                          AppRoutes.subchapters,
+                          arguments: {'chapterId': index + 1},
+                        );
+                      } else {
+                        Get.toNamed(AppRoutes.chapter12Detail);
+                      }
+                    },
+                  );
                 }),
               ),
             ],
@@ -105,14 +140,9 @@ class _ChaptersScreenState extends State<ChaptersScreen> {
     );
   }
 
-  Widget _buildChapterTile(String title, int index) {
+  Widget _buildChapterTile(String title, {VoidCallback? onTap}) {
     return GestureDetector(
-      onTap: () {
-        Get.toNamed(
-          AppRoutes.subchapters,
-          arguments: {'chapterId': index + 1},
-        );
-      },
+      onTap: onTap,
       child: Container(
         decoration: BoxDecoration(
           color: Colors.white,
@@ -128,7 +158,7 @@ class _ChaptersScreenState extends State<ChaptersScreen> {
         ),
         child: Center(
           child: KurdishText(
-            text: title, // ← use the passed Kurdish title
+            text: title,
             fontSize: 20,
             fontWeight: FontWeight.bold,
             color: Colors.black87,

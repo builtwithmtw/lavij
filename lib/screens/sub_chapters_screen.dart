@@ -1,10 +1,11 @@
 import 'dart:convert';
+import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:get/get.dart';
-import 'package:mybook/constants/app_routes.dart';
-import 'package:mybook/widgets/KurdishText.dart';
-import 'package:mybook/model/ChapterModel.dart'; // import model
+import 'package:lavij/constants/app_routes.dart';
+import 'package:lavij/widgets/KurdishText.dart';
+import 'package:lavij/model/ChapterModel.dart'; // import model
 
 class Subchaptersscreen extends StatefulWidget {
   const Subchaptersscreen({super.key});
@@ -28,8 +29,7 @@ class _SubchaptersscreenState extends State<Subchaptersscreen> {
     print("Loading chapter with ID: $id");
     final jsonString = await rootBundle.loadString('assets/chapter${id}.json');
     final List<dynamic> jsonList = jsonDecode(jsonString);
-
-    final chapterData = Chapter.fromJson(jsonList[0]); // pick first item
+    final chapterData = Chapter.fromJson(jsonList[0]);
 
     setState(() {
       chapter = chapterData;
@@ -59,20 +59,32 @@ class _SubchaptersscreenState extends State<Subchaptersscreen> {
           ),
           itemBuilder: (context, index) {
             final sub = chapter!.subchapters[index];
-            return _buildSubChapterTile(sub);
+            return _buildSubChapterTile(sub, chapterId);
           },
         ),
       ),
     );
   }
 
-  Widget _buildSubChapterTile(Subchapter subchapter) {
+  Widget _buildSubChapterTile(Subchapter subchapter, int chapterId) {
     return GestureDetector(
       onTap: () {
-        Get.toNamed(AppRoutes.chapterDetail, arguments: {
-          'title': subchapter.title,
-          'content': subchapter.content,
-        });
+        if (chapterId != 4 && chapterId != 11) {
+          Get.toNamed(AppRoutes.chapterDetail, arguments: {
+            'title': subchapter.title,
+            'content': subchapter.content,
+          });
+        } else {
+          log('chapterId: $chapterId');
+
+          Get.toNamed(
+            AppRoutes.subsubchapters,
+            arguments: {
+              'chapterId': chapterId,
+              'title': subchapter.title,
+            },
+          );
+        }
       },
       child: Container(
         decoration: BoxDecoration(
