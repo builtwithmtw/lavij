@@ -33,30 +33,26 @@ class _Chapter12DetailScreenState extends State<Chapter12DetailScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Directionality(
-      textDirection: TextDirection.rtl,
-      child: Scaffold(
-        appBar: AppBar(
-          title: const Text('تفاصيل الفصل'),
-        ),
-        body: items.isEmpty
-            ? const Center(child: CircularProgressIndicator())
-            : ListView.separated(
-                padding: const EdgeInsets.all(16),
-                itemCount: items.length,
-                separatorBuilder: (context, index) =>
-                    const SizedBox(height: 10),
-                itemBuilder: (context, index) {
-                  return _buildChapterTile(
-                    items[index].title,
-                    onTap: () {
-                      Get.to(() => const ChildScreen(),
-                          arguments: items[index]); // 👈 send Folder
-                    },
-                  );
-                },
-              ),
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('تفاصيل الفصل'),
       ),
+      body: items.isEmpty
+          ? const Center(child: CircularProgressIndicator())
+          : ListView.separated(
+              padding: const EdgeInsets.all(16),
+              itemCount: items.length,
+              separatorBuilder: (context, index) => const SizedBox(height: 10),
+              itemBuilder: (context, index) {
+                return _buildChapterTile(
+                  items[index].title,
+                  onTap: () {
+                    Get.to(() => const ChildScreen(),
+                        arguments: items[index]); // 👈 send Folder
+                  },
+                );
+              },
+            ),
     );
   }
 

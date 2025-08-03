@@ -6,6 +6,7 @@ import 'package:lavij/screens/child_screen.dart';
 import 'package:lavij/screens/home_screen.dart';
 import 'package:lavij/screens/sub_chapters_screen.dart';
 import 'package:lavij/screens/sub_sub_chapters_screen.dart';
+import 'package:lavij/screens/table_screen.dart';
 
 class AppRoutes {
   static const String welcome = '/';
@@ -15,6 +16,7 @@ class AppRoutes {
   static const String chapterDetail = '/chapter_detail';
   static const String chapter12Detail = '/chapter_12_detail';
   static const String childScreen = '/childScreen';
+  static const String tableOfContent = '/tableOfContent';
 
   static final routes = [
     GetPage(name: welcome, page: () => HomeScreen()),
@@ -24,5 +26,6 @@ class AppRoutes {
     GetPage(name: chapterDetail, page: () => Chapterdetailscreen()),
     GetPage(name: chapter12Detail, page: () => Chapter12DetailScreen()),
     GetPage(name: childScreen, page: () => ChildScreen()),
+    GetPage(name: tableOfContent, page: () => TableOfContentScreen()),
   ];
 }

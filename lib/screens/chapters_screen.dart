@@ -99,10 +99,15 @@ class _ChaptersScreenState extends State<ChaptersScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  KurdishText(
-                    text: 'ناظةرؤكا ثةرتؤكيَ',
-                    fontSize: 24,
-                    color: Colors.black,
+                  GestureDetector(
+                    onTap: () {
+                      Get.toNamed(AppRoutes.tableOfContent);
+                    },
+                    child: KurdishText(
+                      text: 'ناظةرؤكا ثةرتؤكيَ',
+                      fontSize: 24,
+                      color: Colors.black,
+                    ),
                   ),
                 ],
               ),

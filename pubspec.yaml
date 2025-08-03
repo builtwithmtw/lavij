@@ -115,6 +115,7 @@ flutter:
     - assets/chapter9.json
     - assets/chapter10.json
     - assets/chapter11.json
+    - assets/table_of_content.json
     - assets/pics.json
 
   # example:
