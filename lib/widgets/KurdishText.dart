@@ -21,15 +21,14 @@ class KurdishText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       text,
-      textDirection: TextDirection.rtl, // For Sorani (Right to Left)
+      textDirection: TextDirection.rtl,
       softWrap: true,
       maxLines: null,
       style: TextStyle(
-        fontSize: fontSize,
-        fontWeight: fontWeight,
-        color: color,
-        fontFamily: 'FindiKIsam', // Default to Alwand
-      ),
+          fontSize: fontSize,
+          fontWeight: fontWeight,
+          color: color,
+          fontFamily: "Rudaw-Regular"),
     );
   }
 }

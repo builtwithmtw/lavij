@@ -36,18 +36,8 @@ dev_dependencies:
 flutter:
   uses-material-design: true
 
-  fonts:
-    - family: AliKAlwand
-      fonts:
-        - asset: assets/fonts/Ali-K-Alwand.ttf
-
-    - family: FindiKIsam
-      fonts:
-        - asset: assets/fonts/FINDI_K_ISAM.ttf
-
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/fonts/
     - assets/images/12_1/
     - assets/images/12_2/1/
     - assets/images/12_2/2/
@@ -117,6 +107,14 @@ flutter:
     - assets/chapter11.json
     - assets/table_of_content.json
     - assets/pics.json
+
+  fonts:
+    - family: AliKAlwand
+      fonts:
+        - asset: assets/fonts/al-kwnd.TTF
+    - family: Rudaw-Regular
+      fonts:
+        - asset: assets/fonts/Rudaw-Regular.ttf
 
   # example:
   # fonts:

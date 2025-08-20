@@ -54,7 +54,11 @@ class _SubsubchaptersscreenState extends State<Subsubchaptersscreen> {
     }
 
     return Scaffold(
-      appBar: AppBar(title: Text(selectedSubChapter!.title)),
+      appBar: AppBar(
+          title: Text(selectedSubChapter!.title,
+              style: TextStyle(
+                fontFamily: "Rudaw-Regular",
+              ))),
       body: Padding(
         padding: const EdgeInsets.all(12.0),
         child: GridView.builder(

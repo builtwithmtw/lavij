@@ -12,7 +12,12 @@ class ChildScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(folder.title),
+        title: Text(
+          folder.title,
+          style: TextStyle(
+            fontFamily: "Rudaw-Regular",
+          ),
+        ),
       ),
       body: ListView.separated(
         padding: const EdgeInsets.all(16),

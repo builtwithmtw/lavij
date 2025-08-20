@@ -78,7 +78,7 @@ class _ChaptersScreenState extends State<ChaptersScreen> {
                 decoration: InputDecoration(
                   hintText: '...كهران بو بابيك',
                   hintStyle: TextStyle(
-                    fontFamily: 'AliKAlwand', // 👈 for placeholder/hint
+                    fontFamily: "Rudaw-Regular",
                     fontSize: 16,
                     color: Colors.grey[600],
                   ),
