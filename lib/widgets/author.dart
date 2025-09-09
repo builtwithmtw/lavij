@@ -12,11 +12,11 @@ class Author extends StatelessWidget {
         Column(
           children: [
             KurdishText(
-              text: 'مؤساعه سهد نبرايهيه',
+              text: 'موسی اسعدا ابراهیم',
               fontSize: 18,
             ),
             KurdishText(
-              text: 'ماموستاى ياريده دهر',
+              text: ' مامۆستایێ هاریكار',
               fontSize: 18,
             ),
           ],

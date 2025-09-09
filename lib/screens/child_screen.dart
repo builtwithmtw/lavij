@@ -14,9 +14,6 @@ class ChildScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text(
           folder.title,
-          style: TextStyle(
-            fontFamily: "Rudaw-Regular",
-          ),
         ),
       ),
       body: ListView.separated(

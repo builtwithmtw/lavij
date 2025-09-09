@@ -111,10 +111,27 @@ flutter:
   fonts:
     - family: AliKAlwand
       fonts:
-        - asset: assets/fonts/al-kwnd.TTF
-    - family: Rudaw-Regular
+        - asset: assets/fonts/Ali-K-Alwand.ttf
+
+    - family: Findi_K_Isam
+      fonts:
+        - asset: assets/fonts/FINDI_K_ISAM.ttf
+
+    - family: NizarNastaliqKurdish
+      fonts:
+        - asset: assets/fonts/NizarNastaliqKurdish.ttf
+
+    - family: RudawRegular
       fonts:
         - asset: assets/fonts/Rudaw-Regular.ttf
+
+    - family: Sarchia_Makka
+      fonts:
+        - asset: assets/fonts/Sarchia_Makka.ttf
+
+    - family: NRTReg
+      fonts:
+        - asset: assets/fonts/NRT-Reg.ttf
 
   # example:
   # fonts:

@@ -49,9 +49,6 @@ class _SubchaptersscreenState extends State<Subchaptersscreen> {
       appBar: AppBar(
           title: Text(
         chapter!.title,
-        style: TextStyle(
-          fontFamily: "Rudaw-Regular",
-        ),
       )),
       body: Padding(
         padding: const EdgeInsets.all(12.0),

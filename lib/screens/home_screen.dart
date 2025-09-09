@@ -25,18 +25,18 @@ class HomeScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 KurdishText(
-                    text: 'ناونيشانى كتيّب',
+                    text: ' ناڤ و نیشانێن په‌رتووكێ',
                     fontSize: 24,
                     fontWeight: FontWeight.bold,
                     color: Colors.black),
                 SizedBox(height: 10),
                 KurdishText(
-                  text: 'لاظذ',
+                  text: 'لاڤژ',
                 ),
                 SizedBox(height: 20),
                 ElevatedButton(
                   child: KurdishText(
-                    text: 'ده ستيى بكه بو خويندن',
+                    text: ' ده‌ستپێكرن بۆ خوندنێ    ',
                     color: Colors.white,
                     fontSize: 20,
                   ),

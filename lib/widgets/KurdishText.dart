@@ -25,10 +25,10 @@ class KurdishText extends StatelessWidget {
       softWrap: true,
       maxLines: null,
       style: TextStyle(
-          fontSize: fontSize,
-          fontWeight: fontWeight,
-          color: color,
-          fontFamily: "Rudaw-Regular"),
+        fontSize: fontSize,
+        fontWeight: fontWeight,
+        color: color,
+      ),
     );
   }
 }

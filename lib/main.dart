@@ -21,6 +21,7 @@ class MyApp extends StatelessWidget {
       getPages: AppRoutes.routes,
       theme: ThemeData(
           useMaterial3: true,
+          fontFamily: 'RudawRegular',
           colorScheme: ColorScheme.fromSwatch().copyWith(
             primary: AppColors.primary,
             secondary: AppColors.secondary,

@@ -12,18 +12,18 @@ class ChaptersScreen extends StatefulWidget {
 
 class _ChaptersScreenState extends State<ChaptersScreen> {
   final List<String> kurdishChapters = [
-    'باب يه‌كه‌م', // 1
-    'باب دووه‌م', // 2
-    'باب سێیه‌م', // 3
-    'باب چوارهم', // 4
-    'باب پێنجه‌م', // 5
-    'باب شه‌شهم', // 6
-    'باب حه‌وتهم', // 7
-    'باب هه‌شتهم', // 8
-    'باب نۆهم', // 9
-    'باب ده‌هم', // 10
-    'باب یازده‌م', // 11
-    'باب دوازده‌م' // 12
+    'به‌شێ ئێكێ', // 1
+    'به‌شێ دوویێ', // 2
+    'به‌شێ سێیێ', // 3
+    'به‌شێ چارێ', // 4
+    'به‌شێ پێنچێ', // 5
+    'به‌شێ شه‌شێ', // 6
+    'به‌شێ هه‌فتی', // 7
+    'به‌شێ هه‌شتێ', // 8
+    'به‌شێ نه‌هێ', // 9
+    'به‌شێ ده‌هێ', // 10
+    'به‌شێ یازدێ', // 11
+    'به‌شێ دوازدێ' // 12
   ];
 
   late List<String> chapters;
@@ -54,7 +54,7 @@ class _ChaptersScreenState extends State<ChaptersScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   KurdishText(
-                    text: 'كتيّب',
+                    text: 'په‌رتووك',
                     fontSize: 24,
                     fontWeight: FontWeight.bold,
                     color: Colors.black,
@@ -72,13 +72,12 @@ class _ChaptersScreenState extends State<ChaptersScreen> {
               /// ── Search Bar
               TextField(
                 style: TextStyle(
-                  fontFamily: 'AliKAlwand', // 👈 for typed text
+                  fontFamily: 'RudawRegular',
                   fontSize: 18,
                 ),
                 decoration: InputDecoration(
                   hintText: '...كهران بو بابيك',
                   hintStyle: TextStyle(
-                    fontFamily: "Rudaw-Regular",
                     fontSize: 16,
                     color: Colors.grey[600],
                   ),
@@ -104,7 +103,7 @@ class _ChaptersScreenState extends State<ChaptersScreen> {
                       Get.toNamed(AppRoutes.tableOfContent);
                     },
                     child: KurdishText(
-                      text: 'ناظةرؤكا ثةرتؤكيَ',
+                      text: 'ناڤه‌رۆكا په‌رتووكێ ',
                       fontSize: 24,
                       color: Colors.black,
                     ),
@@ -113,7 +112,6 @@ class _ChaptersScreenState extends State<ChaptersScreen> {
               ),
               SizedBox(height: 25),
 
-              /// ── Grid (Scroll inside parent scroll view)
               GridView.count(
                 crossAxisCount: 2,
                 shrinkWrap: true,
